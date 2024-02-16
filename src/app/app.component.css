@@ -1,0 +1,8 @@
+.pass_fail__table{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.pass_fail__table table{
+padding-left: 40px;
+}
