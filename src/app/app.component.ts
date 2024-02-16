@@ -8,43 +8,39 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet, CommonModule, ReactiveFormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'filter-pass-fail';
 
-  myData: FormGroup;
+  // myData: FormGroup;
   listData: any[];
   passedData: any[] = [];
   failedData: any[] = [];
 
-  constructor (private formBuilder: FormBuilder) {
+  constructor() {
     this.listData = [
       {
-        fname: "ranjith",
+        fname: 'ranjith',
         age: 31,
-        phone: 9524414213
+        phone: 9524414213,
       },
       {
-        fname: "dinesh",
+        fname: 'dinesh',
         age: 22,
-        phone: 987654321
-      },{
-        fname: "ranjith",
-        age: 31,
-        phone: 9524414213
+        phone: 987654321,
       },
       {
-        fname: "dinesh",
+        fname: 'ranjith',
+        age: 31,
+        phone: 9524414213,
+      },
+      {
+        fname: 'dinesh',
         age: 22,
-        phone: 987654321
-      }
+        phone: 987654321,
+      },
     ];
-    this.myData = this.formBuilder.group({
-      fname: [''],
-      age: [],
-      phone: [],
-    });
   }
 
   pass(index: number) {

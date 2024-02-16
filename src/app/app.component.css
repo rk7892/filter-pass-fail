@@ -3,6 +3,6 @@
     justify-content: center;
     margin-top: 30px;
 }
-.pass_fail__table table{
-padding-left: 40px;
+.pass{
+    padding-right: 30px;
 }

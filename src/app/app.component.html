@@ -1,3 +1,4 @@
+<h1>Master data</h1>
 <table class="table table-responsive">
   <thead>
     <tr>
@@ -20,37 +21,44 @@
 </table>
 
 <div class="pass_fail__table">
-  <table class="pass">
-    <thead>
-      <tr>
-        <th>name</th>
-        <th>age</th>
-        <th>phone</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let list of passedData">
-        <td>{{list.fname}}</td>
-        <td>{{list.age}}</td>
-        <td>{{list.phone}}</td>
-       
-      </tr>
-    </tbody>
-  </table>
-  <table class="fail">
-    <thead>
-      <tr>
-        <th>name</th>
-        <th>age</th>
-        <th>phone</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let list of failedData">
-        <td>{{list.fname}}</td>
-        <td>{{list.age}}</td>
-        <td>{{list.phone}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div>
+    <h2 style="color:green">Pass Table</h2>
+    <table class="pass">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of passedData">
+          <td>{{list.fname}}</td>
+          <td>{{list.age}}</td>
+          <td>{{list.phone}}</td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h2 style="color:red">Fail Table</h2>
+    <table class="fail">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of failedData">
+          <td>{{list.fname}}</td>
+          <td>{{list.age}}</td>
+          <td>{{list.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
 </div>
