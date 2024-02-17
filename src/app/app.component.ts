@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component, Input} from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -13,6 +13,8 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'filter-pass-fail';
 
+
+
   // myData: FormGroup;
   listData: any[];
   passedData: any[] = [];
@@ -24,32 +26,62 @@ export class AppComponent {
         fname: 'ranjith',
         age: 31,
         phone: 9524414213,
+        active: 'yes'
       },
       {
         fname: 'dinesh',
         age: 22,
         phone: 987654321,
+        active: 'inactive'
       },
       {
         fname: 'ranjith',
         age: 31,
         phone: 9524414213,
+        active: 'yes'
       },
       {
         fname: 'dinesh',
         age: 22,
         phone: 987654321,
+        active: 'no'
+      },
+      {
+        fname: 'Hari',
+        age: 22,
+        phone: 987654321,
+        active: 'abc'
+      },
+      {
+        fname: 'Hari poison',
+        age: 22,
+        phone: 987654321,
+        active: 'yes'
       },
     ];
   }
 
-  pass(index: number) {
-    const passedItem = this.listData.splice(index, 1)[0];
-    this.passedData.push(passedItem);
+  filteringArray(index: number, status: any) {
+    
+    if (status === 'pass'){
+      const passedItem = this.listData.splice(index, 1)[0];
+      this.passedData.push(passedItem);
+    }
+    else{
+      const failedItem = this.listData.splice(index, 1)[0];
+      this.failedData.push(failedItem);
+    }
   }
 
-  fail(index: number) {
-    const failedItem = this.listData.splice(index, 1)[0];
-    this.failedData.push(failedItem);
-  }
+  
+
+  // pass(index: number) {
+  //   const passedItem = this.listData.splice(index, 1)[0];
+  //   this.passedData.push(passedItem);
+  // }
+
+  // fail(index: number) {
+  //   const failedItem = this.listData.splice(index, 1)[0];
+  //   this.failedData.push(failedItem);
+  // }
 }

@@ -5,6 +5,7 @@
       <th>name</th>
       <th>age</th>
       <th>phone</th>
+      <th>active</th>
     </tr>
   </thead>
   <tbody>
@@ -12,9 +13,12 @@
       <td>{{list.fname}}</td>
       <td>{{list.age}}</td>
       <td>{{list.phone}}</td>
+      <td [style.color]="list.active === 'yes' ? 'green' : 'red'" >{{list.active}}</td>
+      <!-- <td [ngStyle]="{'color': list.active === 'yes' ? 'green' : 'red'}">{{list.active}}</td> -->
       <td>
-        <button (click)="pass(i)">Pass</button>
-        <button (click)="fail(i)">Fail</button>
+        <button (click)="filteringArray(i, 'pass')">Pass</button> | 
+        <button (click)="filteringArray(i, 'fail')">Fail</button>
+
       </td>
     </tr>
   </tbody>
@@ -29,13 +33,16 @@
           <th>name</th>
           <th>age</th>
           <th>phone</th>
+          <th>active</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let list of passedData">
+        <tr *ngFor="let list of passedData"> 
           <td>{{list.fname}}</td>
           <td>{{list.age}}</td>
           <td>{{list.phone}}</td>
+          <td [style.color]="list.active === 'yes' ? 'green' : 'red'" >{{list.active}}</td>
+          <!-- <td [ngStyle]="{'color': list.active === 'yes' ? 'green' : 'red'}">{{list.active}}</td> -->
          
         </tr>
       </tbody>
@@ -49,6 +56,7 @@
           <th>name</th>
           <th>age</th>
           <th>phone</th>
+          <th>active</th>
         </tr>
       </thead>
       <tbody>
@@ -56,6 +64,8 @@
           <td>{{list.fname}}</td>
           <td>{{list.age}}</td>
           <td>{{list.phone}}</td>
+          <td [style.color]="list.active === 'yes' ? 'green' : 'red'">{{list.active}}</td>
+          <!-- <td [ngStyle]="{'color':list.active === 'yes' ? 'green' : 'red'}">{{list.active}}</td> -->
         </tr>
       </tbody>
     </table>

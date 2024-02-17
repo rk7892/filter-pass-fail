@@ -6,3 +6,10 @@
 .pass{
     padding-right: 30px;
 }
+
+.success{
+    color: green;
+}
+.unseccess{
+    color: red;
+}
